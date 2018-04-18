@@ -1,12 +1,8 @@
 package com.example.kyle.githubapi
 
-import android.content.Intent
-import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.kyle.githubapi.commons.Constants
 
 class MainActivity : AppCompatActivity() {
 
