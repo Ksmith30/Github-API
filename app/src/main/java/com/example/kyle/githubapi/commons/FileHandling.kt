@@ -11,8 +11,8 @@ class FileHandling {
 
     init {
         loadPropertyFile()
-        clientId = setClientId(properties)
-        clientSecret = setClientSecret(properties)
+        clientId = removeQuotations(setClientId(properties))
+        clientSecret = removeQuotations(setClientSecret(properties))
     }
 
     private fun loadPropertyFile() {
@@ -40,5 +40,9 @@ class FileHandling {
 
     fun getClientSecret(): String {
         return clientSecret
+    }
+
+    private fun removeQuotations(text: String): String {
+        return text.replace("\"", "")
     }
 }
